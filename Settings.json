@@ -1,5 +1,63 @@
 {
-    "Configuration_Settings" : {},
-    "Fine_Tune_Settings" : {},
-    "MLM_Settings" : {}
+    "Configuration_Settings" : {
+        "use_custom_weights" : true,
+        "path_to_file_in_colab" : "",
+        "fine_tune_model" : false,
+        "MLM_prediction" : false
+    },
+    "Fine_Tune_Settings" : {
+        "FT_Settings": {
+            "fine_tune_file_source" : "",
+            "path_to_fine_tune_file" : "",
+            "percent_to_mask" : 0.15,
+            "max_length" : 65,
+            "batch_size" : 108,
+            "number_of_epochs" : 100,
+            "learning_rate": 0.00005
+        },
+        "Save_Settings" : {
+            "save_every_number_of_steps" : 0,
+            "save_final_to_drive" : false,
+            "download_final_state" : false
+        }
+    },
+    "MLM_Settings" : {
+        "Sequence_Settings" : {
+            "process_batch" : false,
+            "path_to_batch" : "",
+            "use_random_sequence" : false,
+            "random_sequence_length" : false,
+            "original_sequence" : "",
+            "masked_sequence  " : "",
+            "mask_all_residues" : false
+        },
+        "Acceptance_Settings" : {
+            "deterministic" : false,
+            "deterministic_seed" : 0,
+            "slowdown" : false,
+            "use_threshold" : true,
+            "threshold_percent" : 0.99,
+            "num_changes_to_keep" : 5,
+            "max_num_iterations" : 250
+        },
+        "Burn-in_Settings" : {
+            "iterations_to_burnin" : 0,
+            "burn_threshold" : 0.8,
+            "burn_num_changes_to_keep" : 15 
+        },
+        "Results_and_Display_Settings" : {
+            "order" : "",
+            "get_score_average" : false,
+            "get_score_entropy" : false,
+            "spaces_in_output" : false,
+            "display_iterations" : true,
+            "display_num_different" : true,
+            "display_score_average" : true,
+            "dispaly_score_entropy" : true
+        },
+        "Logging" : {
+            "write_log_file" : true,
+            "number_to_log" : 5
+        }
+    }
 }
