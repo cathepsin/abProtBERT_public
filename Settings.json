@@ -1,7 +1,7 @@
 {
     "Configuration_Settings" : {
         "use_custom_weights" : true,
-        "path_to_file_in_colab" : "",
+        "path_to_file_in_google" : "",
         "fine_tune_model" : false,
         "MLM_prediction" : false
     },
