@@ -26,7 +26,7 @@
             "process_batch" : false,
             "path_to_batch" : "",
             "use_random_sequence" : false,
-            "random_sequence_length" : false,
+            "random_sequence_length" : 30,
             "original_sequence" : "",
             "masked_sequence  " : "",
             "mask_all_residues" : false
