@@ -53,7 +53,7 @@
             "display_iterations" : true,
             "display_num_different" : true,
             "display_score_average" : true,
-            "dispaly_score_entropy" : true
+            "display_score_entropy" : true
         },
         "Logging" : {
             "write_log_file" : true,
