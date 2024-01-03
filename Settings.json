@@ -57,7 +57,7 @@
         },
         "Logging" : {
             "write_log_file" : true,
-            "number_to_log" : 5
+            "number_residues_to_log" : 5
         }
     }
 }

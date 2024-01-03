@@ -252,36 +252,68 @@ and should be greater than <code>num_changes_to_keep</code>.</p>
 <h3>Results_and_Display_Settings</h3>
 <p>-------------------------------------------------------------------------------------------------------------</p>
 <h3>order</h3>
-<p></p>
+<p>This setting is currently a leftover setting from previous versions of abProtBERT, but the whole thing crashes
+if I delete this. This will be properly removed later.</p>
 
 <h3>get_score_average</h3>
-<p></p>
+<p>This setting adds an extra step to calculate a "score" for a sequence at the end of an iteration. This score is produced by averaging each
+BERT confidence score for each residue, and then simply taking the average of each score. This score is displayed in the logfile by default.</p>
 
 <h3>get_score_entropy</h3>
-<p></p>
+<p>This setting adds an extra step to calculate a "score" for a sequence at the end of an iteration. This score is produced by calculating
+the total <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">Shannon entropy</a> of a sequence using each BERT confidence
+score for each residue. This score is displayed in the logfile by default.</p>
 
 <h3>spaces_in_output</h3>
-<p></p>
+<p>This setting causes the final output report of the program to contain a space between each residue. Accepted values are:</p>
+<ul>
+    <li><strong>true</strong> : Include spaces in the final output</li>
+    <li><strong>false</strong> : Have no spaces in the final output</li>
+</ul>
 
 <h3>display_iterations</h3>
-<p></p>
+<p>This setting causes each iteration to be displayed in the final output report. Accepted values are:</p><ul>
+    <li><strong>true</strong> : Display each iteration</li>
+    <li><strong>false</strong> : Only display the final iteration</li>
+</ul>
 
 <h3>display_num_different</h3>
-<p></p>
+<p>This setting causes the number of modified residues from the previous iteration to be displayed next to each sequence in the
+final output report. Accepted values are:</p><ul>
+    <li><strong>true</strong> : Display number of modified residues</li>
+    <li><strong>false</strong> : Do not display number of modified residues</li>
+</ul>
 
 <h3>display_score_average</h3>
-<p></p>
+<p>This setting causes the score calculated from the <code>get_score_average</code> setting to display next to each iteration
+in the final output report. Accepted values are:</p>
+<ul>
+    <li><strong>true</strong> : Display score</li>
+    <li><strong>false</strong> : Do not display score</li>
+</ul>
 
 <h3>dispaly_score_entropy</h3>
-<p></p>
+<p>This setting causes the score calculated from the <code>get_score_entropy</code> setting to display next to each iteration
+in the final output report. Accepted values are:</p>
+<ul>
+    <li><strong>true</strong> : Display score</li>
+    <li><strong>false</strong> : Do not display score</li>
+</ul>
 
 <p>-------------------------------------------------------------------------------------------------------------</p>
 <h3>Logging</h3>
 <p>-------------------------------------------------------------------------------------------------------------</p>
 
 <h3>write_log_file</h3>
-<p></p>
+<p>This setting causes a logfile to be created for a sequence. The logfile will be titled <code>logfile_{number}.txt</code>, where
+<code>{number}</code> is replaced with an integer between 0 to n, where n is the number of sequences contained in a batch. If only
+one sequence is processed, 0 will be used instead. Accepted values are:</p>
+<ul>
+    <li><strong>true</strong> : Create logfile</li>
+    <li><strong>false</strong> : Do not create logfile</li>
+</ul>
 
-<h3>number_to_log</h3>
-<p></p>
+<h3>number_residues_to_log</h3>
+<p>This setting determines how many of the top <em>n</em> BERT confidence scores to display for each iteration in the logfile. This value should
+be an integer between <strong>1</strong> and <strong>25</strong></p>
 </body>
